@@ -47,16 +47,59 @@
             background-color: #ddd;
             color: black;
         }
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 15px;
+            
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width:600px) {
+            .column {
+                width:100px;            }
+        }
     </style>
 </head>
 <body>
   <div class="header">
     <h1>Header</h1>
+    <p>Resize the browser window to see the rsponsive effect.</p>
   </div> 
+
   <div class="topnav">
     <a href="#">Link</a>
     <a href="#">Link</a>
     <a href="#">Link</a>
   </div> 
+
+  <div class="row">
+    <div class="column">
+        <h2>column</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+        Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.quisque vehicular, riscus aget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. praesent scelerisque tortor sed accumsan convallis.</p>
+
+    </div>
+
+
+    <div class="column">
+        <h2>column</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Maecenas sit amet pretium urna. Vivamus venentis velit nec neque ultricies, eget elementum magna tristique .Quisque vechicular, risus eget aliquam placerat, pursus aget aliquam placerat, pursus leo trincidunt eros, eget luctus quamorci in velit. Praesent scelerisque tortor sed accumsan convallis.
+        </p>
+    </div>
+
+    <div class="column">
+        <h2>Column</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. 
+            Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, pursus leo trincidunteros, eget luctus quamorci in velit. Praesent scelerisque tortor sed accumsan convallis.
+        </p>
+    </div>
+  </div>
 </body>
 </html>
